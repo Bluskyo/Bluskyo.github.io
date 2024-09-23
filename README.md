@@ -1,3 +1,3 @@
 # Bluskyfishing.github.io
 First Websie:
-https://bluskyfishing.github.io/
+https://Bluskyo.github.io/
