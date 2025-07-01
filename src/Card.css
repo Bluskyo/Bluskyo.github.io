@@ -1,7 +1,16 @@
-.Card {
-    background-color:chocolate;
+.card {
+    max-width: 600px;
+    background: linear-gradient(180deg,rgba(71, 0, 213, 1) 0%, rgba(37, 0, 111, 1) 100%);
     border-radius: 5rem;
-    padding: 2rem;
+    padding: 2.5rem;
     margin: 2rem 0rem 2rem 0rem;
-    max-width: 500px;
+}
+
+.title {
+    font-size: 4em;
+    letter-spacing: 0.5rem;
+}
+
+.text-content {
+    font-size: 1.3em;
 }

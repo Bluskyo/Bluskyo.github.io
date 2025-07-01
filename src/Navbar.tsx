@@ -3,8 +3,8 @@ import './Navbar.css';
 function Navbar() {
   return (
     <>
-        <div className="navbar">
-          <p> About Projects Contact</p>
+        <div className='navbar-wrapper'>
+          <p className='navbar'> About Projects Contact</p>
         </div>
     </>
   )
