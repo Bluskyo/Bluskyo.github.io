@@ -1,6 +1,7 @@
 .Card {
-   background-color:chocolate;
-   border-radius: 20px;
-   padding: 2rem;
-   margin: 2rem 0rem 2rem 0rem;
+    background-color:chocolate;
+    border-radius: 5rem;
+    padding: 2rem;
+    margin: 2rem 0rem 2rem 0rem;
+    max-width: 500px;
 }

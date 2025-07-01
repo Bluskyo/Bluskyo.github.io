@@ -1,4 +1,5 @@
 import Card from "./Card"
+import './Content.css'
 
 function Content() {
   return (
