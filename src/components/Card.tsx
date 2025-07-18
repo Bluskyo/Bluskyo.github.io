@@ -1,15 +1,16 @@
 import type { FormEvent } from 'react';
 import './Card.css'
-import type { colors, inputField } from './Content';
+import type { color, image, inputField } from './Content';
 
 
 type ContentProps = {
   title: string
   secondTitle?: string
   content: string
-  colors: colors[]
+  color: color[]
   angle: number
   inputData?: inputField[]
+  image?: image[]
 }
 
 function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -24,7 +25,7 @@ function handleSubmit(event: FormEvent<HTMLFormElement>) {
 }
 
 export default function Card(props: ContentProps) {
-  const gradientString = props.colors
+  const gradientString = props.color
   .map(stop => stop.stop !== undefined ? `${stop.color} ${stop.stop}%` : stop.color)
   .join(', ');
 
@@ -40,9 +41,18 @@ export default function Card(props: ContentProps) {
 
       {props.secondTitle && <h2>{props.secondTitle}</h2>}
       
+      {props.image?.map((image: image, index: number) => {
+        if (image.pos === "top") {
+          return (          
+            <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
+          )
+        }
+      })}
+
       <p className='text-content'>
         {props.content}
       </p>
+
 
       {props.inputData && 
         <form onSubmit={handleSubmit}>
@@ -71,7 +81,7 @@ export default function Card(props: ContentProps) {
                     id={input.name}
                     name={input.name}
                     required={input.required}
-                    size={12}
+                    size={15}
                     placeholder={input.placeholder}
                     />
                   </label>
@@ -84,6 +94,13 @@ export default function Card(props: ContentProps) {
         </form>
       }
 
+      {props.image?.map((image: image, index: number) => {
+        if (image.pos === "bottom") {
+          return (
+            <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
+          )
+        }
+      })}
       
 
     </div>

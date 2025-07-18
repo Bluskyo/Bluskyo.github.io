@@ -1,6 +1,7 @@
-import Navbar from "./Navbar"
-import Content from "./Content"
-import Footer from "./Footer"
+import Content from "./components/Content"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
+
 
 function App() {
   return (
