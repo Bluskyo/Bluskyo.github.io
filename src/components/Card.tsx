@@ -30,7 +30,7 @@ export default function Card(props: ContentProps) {
   .join(', ');
 
   const styles: React.CSSProperties = {
-    background: `linear-gradient(${props.angle}deg, ${gradientString})`,
+    background: `linear-gradient(${props.angle}deg, ${gradientString})`
   };
 
   return (
@@ -55,6 +55,7 @@ export default function Card(props: ContentProps) {
 
 
       {props.inputData && 
+      <div className='form-items'>
         <form onSubmit={handleSubmit}>
           {props.inputData?.map((input: inputField, index: number) => {
 
@@ -90,18 +91,24 @@ export default function Card(props: ContentProps) {
             }
           )}
 
-          {props.inputData && <button>Submit</button>}
+          {props.inputData &&   
+          <div className="submit-container">
+            <button className="submit-button">Submit</button>
+          </div>
+          }
         </form>
+      </div>
       }
 
-      {props.image?.map((image: image, index: number) => {
-        if (image.pos === "bottom") {
-          return (
-            <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
-          )
-        }
-      })}
-      
+      <div className='logos'>
+        {props.image?.map((image: image, index: number) => {
+          if (image.pos === "bottom") {
+            return (
+              <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
+            )
+          }
+        })}
+      </div>
 
     </div>
   )

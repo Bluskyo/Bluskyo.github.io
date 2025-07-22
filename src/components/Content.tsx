@@ -46,6 +46,7 @@ function Content() {
   const contactImages: image[] = [
     { src: "/github-logo.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
     { src: "/linkedin-logo.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
+    //{ src: "/mail-logo.svg", altText: "Mail icon", pos: "bottom", link: "mailto:"},
   ]
 
   return (
