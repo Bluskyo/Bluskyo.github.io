@@ -1,17 +1,18 @@
 textarea {
     font-family: Jost, system-ui;
     resize: none;
-}
-
-img {
-   width: 40px;
-   height: 35px;
+    border-radius: 20px;
+    padding-left: 10px;
 }
 
 label,input {
   display:flex;
   flex-direction:column;
-  font-size: 1.1em;
+}
+
+input {
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .card {
@@ -45,10 +46,22 @@ label,input {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5em;
 }
 
 .form-items > .submit-button {
     justify-content: center;
+}
+
+
+.logo-picture {
+   width: 40px;
+   height: 35px;
+}
+
+.logo-picture:hover{
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
 }
 
 .logos {

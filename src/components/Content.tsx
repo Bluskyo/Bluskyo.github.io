@@ -66,7 +66,7 @@ function Content() {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel condimentum enim, eu tempus urna. 
       Integer varius leo ut fringilla ullamcorper. Nam tellus quam, vehicula ut rhoncus in, consectetur ac ante."
       color={aboutColors}
-      angle={180}
+      gradientAngle={180}
       />
 
       <Card 
@@ -74,14 +74,14 @@ function Content() {
       secondTitle="Anki-add"
       content="This project was my favorite!"
       color={projectsColors}
-      angle={0}
+      gradientAngle={0}
       />
 
       <Card 
-      title="Contact Me"
+      title="Contact"
       content="Please feel free to contact me!"
       color={contactColors}
-      angle={0}
+      gradientAngle={0}
       inputData={contactInput}
       image={contactImages}
       />

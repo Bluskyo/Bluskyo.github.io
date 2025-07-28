@@ -8,7 +8,7 @@ type ContentProps = {
   secondTitle?: string
   content: string
   color: color[]
-  angle: number
+  gradientAngle: number
   inputData?: inputField[]
   image?: image[]
 }
@@ -30,11 +30,11 @@ export default function Card(props: ContentProps) {
   .join(', ');
 
   const styles: React.CSSProperties = {
-    background: `linear-gradient(${props.angle}deg, ${gradientString})`
+    background: `linear-gradient(${props.gradientAngle}deg, ${gradientString})`
   };
 
   return (
-    <div className='card' style={styles}>
+    <div className='card' id={props.title} style={styles}>
       <span className='title'>
         {props.title}
       </span>
@@ -100,15 +100,15 @@ export default function Card(props: ContentProps) {
       </div>
       }
 
-      <div className='logos'>
+      {props.image && <div className='logos'>
         {props.image?.map((image: image, index: number) => {
           if (image.pos === "bottom") {
             return (
-              <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
+              <a href={image.link} key={index}><img className='logo-picture' src={image.src} alt={image.altText}/></a>
             )
           }
         })}
-      </div>
+      </div>}
 
     </div>
   )
