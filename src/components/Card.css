@@ -1,26 +1,10 @@
-textarea {
-    font-family: Jost, system-ui;
-    resize: none;
-    border-radius: 20px;
-    padding-left: 10px;
-}
-
-label,input {
-  display:flex;
-  flex-direction:column;
-}
-
-input {
-    border-radius: 15px;
-    padding: 10px;
-}
-
 .card {
     width: 600px;
     height: 600px;
     border-radius: 5rem;
     padding: 2.5rem;
     margin: 2rem 0rem 2rem 0rem;
+    overflow: none;
 }
 
 .title {
@@ -34,34 +18,44 @@ input {
 
 .submit-button {
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 2em;
+    padding: 1em;
+    transition: 
+    background-color 0.4s,
+    color 1s;
+}
+
+.submit-button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(97, 255, 181, 1);
+}
+
+.submit-button:active {
+    background-color: rgb(0, 218, 116);
 }
 
 .submit-container {
   display: flex;
   justify-content: center;
-  margin: 1em 0em 1em 0em;
+  margin: 1em 0em 0.8em 0em;
 }
 
 .form-items {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5em;
 }
 
 .form-items > .submit-button {
     justify-content: center;
 }
 
-
 .logo-picture {
-   width: 40px;
-   height: 35px;
-}
-
-.logo-picture:hover{
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
+   width: 3rem;
+   height: 2.7rem;
 }
 
 .logos {
@@ -71,5 +65,15 @@ input {
 }
 
 .logos > * {
-    margin: 0em 0.5em 0em 0.5em
+    margin: 1em 1em 0em 1em
+}
+
+.headshot {
+    width: 15rem;
+    height: 15rem;
+}
+
+.text-picture {
+    display: flex;
+    flex-direction: row;
 }

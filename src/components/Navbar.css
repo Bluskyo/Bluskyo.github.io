@@ -1,6 +1,6 @@
 .navbar-wrapper {
     font-size: 2rem;
-    color: white;
+    color: rgb(255, 255, 255);
     justify-content: center;
     display: flex;
     padding: 1rem 0rem 0rem 0rem;
@@ -14,14 +14,27 @@
     border-radius: 5rem;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0);
 }
 
 .category {
     cursor: pointer;
     margin:  0rem 1rem 0rem 1rem;
-
+    position: relative;
+    
 }
 
-.category:hover {
-    color: rgba(255, 255, 255, 0.747);
+.category::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.5s;
+}
+
+.category:hover::after {
+    width: 100%
 }

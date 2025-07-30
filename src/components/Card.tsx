@@ -18,8 +18,8 @@ function handleSubmit(event: FormEvent<HTMLFormElement>) {
   const formData = new FormData(event.currentTarget)
 
   const formValues = {
-    email: formData.get('email'),
-    message: formData.get('message')
+    email: formData.get('Email'),
+    message: formData.get('Message')
   }
   console.log("Submitted data:", formValues);
 }
@@ -35,24 +35,26 @@ export default function Card(props: ContentProps) {
 
   return (
     <div className='card' id={props.title} style={styles}>
+
       <span className='title'>
         {props.title}
       </span>
 
       {props.secondTitle && <h2>{props.secondTitle}</h2>}
-      
-      {props.image?.map((image: image, index: number) => {
-        if (image.pos === "top") {
-          return (          
-            <a href={image.link} key={index}><img src={image.src} alt={image.altText}/></a>
-          )
-        }
-      })}
 
-      <p className='text-content'>
-        {props.content}
-      </p>
-
+      <div className='text-picture'>
+        <p className='text-content'>
+          {props.content}
+        </p>
+        
+        {props.image?.map((image: image, index: number) => {
+          if (image.pos === "top") {
+            return (          
+              <img className='headshot' key={index} src={image.src} alt={image.altText}/>
+            )
+          }
+        })}
+      </div>
 
       {props.inputData && 
       <div className='form-items'>
@@ -67,7 +69,7 @@ export default function Card(props: ContentProps) {
                   id={input.name}
                   name={input.name}
                   required={input.required}
-                  rows={5}
+                  rows={8}
                   cols={33}
                   placeholder={input.placeholder}
                   />
@@ -93,7 +95,7 @@ export default function Card(props: ContentProps) {
 
           {props.inputData &&   
           <div className="submit-container">
-            <button className="submit-button">Submit</button>
+            <button className="submit-button">Send in</button>
           </div>
           }
         </form>

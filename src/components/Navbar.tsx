@@ -2,7 +2,7 @@ import './Navbar.css';
 
 function Navbar() {
 
-  function getId(e: string){
+  function scrollTo(e: string){
     const element = document.getElementById(e);
     element?.scrollIntoView({
       behavior: "smooth"
@@ -13,17 +13,20 @@ function Navbar() {
     <>
       <div className='navbar-wrapper'>
         <span className='navbar'>
-          <p className='category' 
-          onClick={() => {getId("About")}}
-          >About</p>
+          <span className='category' 
+          tabIndex={0}
+          onClick={() => {scrollTo("About")}}
+          >About</span>
 
-          <p className='category' 
-          onClick={() => {getId("Projects")}}
-          >Projects</p>
+          <span className='category' 
+          tabIndex={0}
+          onClick={() => {scrollTo("Projects")}}
+          >Projects</span>
 
-          <p className='category' 
-          onClick={() => {getId("Contact")}}
-          >Contact</p>
+          <span className='category' 
+          tabIndex={0}
+          onClick={() => {scrollTo("Contact")}}
+          >Contact</span>
         </span>
       </div>
     </>
