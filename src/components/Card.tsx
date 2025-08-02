@@ -71,7 +71,7 @@ export default function Card(props: ContentProps) {
         <div className='carousel'>
           <Carousel
             baseWidth={300}
-            autoplay={true}
+            autoplay={false}
             autoplayDelay={4000}
             pauseOnHover={true}
             loop={false}
