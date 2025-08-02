@@ -71,8 +71,8 @@ function Content() {
 
       <Card 
       title="Projects"
-      secondTitle="Anki-add"
-      content="This project was my favorite!"
+      content="These are some of my favorite projects that I have worked on👇🏻" 
+      carousel={true}
       color={projectsColors}
       gradientAngle={0}
       />

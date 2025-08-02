@@ -1,19 +1,39 @@
 .card {
-    width: 600px;
-    height: 600px;
-    border-radius: 5rem;
-    padding: 2.5rem;
-    margin: 2rem 0rem 2rem 0rem;
-    overflow: none;
+    border-radius: 5em;
+    padding: min(2em, 11%);
+    width: min(95%, 600px);
+    box-sizing: border-box;
 }
 
 .title {
-    font-size: 4em;
-    letter-spacing: 0.5rem;
+  font-size: clamp(1.5rem, 5vh, 3rem);
+  letter-spacing: 0.3rem;
+  word-wrap: break-word;
 }
 
 .text-content {
-    font-size: 1.3em;
+    font-size: min(1.5rem, 5vw);
+    margin: 0 0 1rem 0;
+}
+
+.headshot {    
+    height: min(17vh, 200px);
+    width: min(17vh, 200px);
+    border: 4px solid white;  
+    border-radius: 50%;   
+    float: right;      
+    shape-outside: circle();
+    margin: 0 0 0 1vh;
+}
+
+.carousel {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-field {
+    max-width: 20em;
 }
 
 .submit-button {
@@ -22,7 +42,8 @@
     background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 2em;
-    padding: 1em;
+    padding: min(2em, 3%);
+    font-size: clamp(0.8rem, 2vw, 1rem);
     transition: 
     background-color 0.4s,
     color 1s;
@@ -34,46 +55,28 @@
 }
 
 .submit-button:active {
-    background-color: rgb(0, 218, 116);
+    background-color: rgb(0, 114, 61);
 }
 
 .submit-container {
   display: flex;
   justify-content: center;
-  margin: 1em 0em 0.8em 0em;
-}
-
-.form-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-items > .submit-button {
-    justify-content: center;
+  margin: 1em 0em 2em 0em;
 }
 
 .logo-picture {
-   width: 3rem;
-   height: 2.7rem;
+   width: min(6vh, 3rem);
+   height: min(5vh, 2.7rem);
+   transition: filter 0.3s;
+}
+
+.logo-picture:hover{
+    filter: brightness(0);
 }
 
 .logos {
     display:flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.logos > * {
-    margin: 1em 1em 0em 1em
-}
-
-.headshot {
-    width: 15rem;
-    height: 15rem;
-}
-
-.text-picture {
-    display: flex;
-    flex-direction: row;
+    gap: 2em;
 }
