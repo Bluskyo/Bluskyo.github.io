@@ -57,13 +57,7 @@ function Content() {
     <div className="content-grid">
       <Card 
       title="About" 
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Mauris vel condimentum enim, eu tempus urna. 
-      Integer varius leo ut fringilla ullamcorper. 
-      Nam tellus quam, vehicula ut rhoncus in, consectetur ac ante.Lorem ipsum dolor sit amet, 
-      consectetur adipiscing elit. Mauris vel condimentum enim, eu tempus urna. Integer varius leo ut fringilla ullamcorper.
-      Nam tellus quam, vehicula ut rhoncus in, consectetur ac ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Mauris vel condimentum enim, eu tempus urna."
+      content={ `Hi👋🏻 I'm Isak a developer based in Norway with a formal degree in backend development, and a passion for web development.\n\nWith a passion for coding and japanese, I have sought to combine the two to create solutions for japanese learners that makes it easier to study. Through my time studying and building my own projects, I've divided and conquered many problems, and learned new technologies while doing so. Creating sustainable solutions to solve real world problems is what fuels me to keep coding.` }
       color={aboutColors}
       gradientAngle={180}
       image={aboutImage}

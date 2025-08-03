@@ -3,5 +3,6 @@
     grid-auto-rows: 1fr;
     justify-items: center;
     margin-top: 2em;
-    gap: 4em
+    gap: 4em;
+    min-height: 100vh;  
 }
