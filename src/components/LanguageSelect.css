@@ -1,0 +1,43 @@
+.language-select-container {
+    position: fixed;
+}
+
+.language-select-icon {
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.language-select-icon:hover {
+    /* background-color: rgb(207, 45, 45); */
+}
+
+.language-select-list{
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.language-item  {
+    cursor: pointer;
+    position: relative;
+}
+
+.language-item::after {
+    content: '';
+    height: 1px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    transition: all 0.5s;
+}
+
+.language-item:hover::after {
+    width: 100%
+}

@@ -4,5 +4,5 @@
     justify-items: center;
     margin-top: 2em;
     gap: 4em;
-    min-height: 100vh;  
+    min-height: 100vh; /* weird scaling when zooming out */
 }

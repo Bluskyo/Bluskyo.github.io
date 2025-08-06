@@ -28,7 +28,7 @@ function Content() {
   ]
 
   const aboutImage: image[] = [
-    { src: "/headshot.png", altText: "headshot", pos: "top"}
+    { src: "/pictures/headshot.png", altText: "headshot", pos: "top"}
   ]
 
   const projectsColors: color[] = [
@@ -43,8 +43,8 @@ function Content() {
   ]
 
   const contactImages: image[] = [
-    { src: "/github-logo.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
-    { src: "/linkedin-logo.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
+    { src: "/logos/github-logo.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
+    { src: "/logos/linkedin-logo.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
     //{ src: "/mail-logo.svg", altText: "Mail icon", pos: "bottom", link: "mailto:"},
   ]
 

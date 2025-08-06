@@ -6,6 +6,7 @@ import "./Carousel.css";
 export interface CarouselItem {
   title: string;
   description: string;
+  link: string,
   id: number;
   icon: React.ReactElement;
 }
@@ -24,26 +25,30 @@ const DEFAULT_ITEMS: CarouselItem[] = [
   {
     title: "Anki-Add",
     description: "Firefox extension for quickly adding japanese words to anki. ",
+    link: "https://github.com/Bluskyo/Anki-Add",
     id: 1,
-    icon: <img className="carousel-icon" src={"/project-logos/anki-add.png"} alt="anki-add logo"/>,
+    icon: <img className="carousel-icon" src={"/logos/anki-add.png"} alt="anki-add logo"/>,
   },
   {
     title: "Katsuyou",
     description: "Website for practicing japanese verb conjugation.",
+    link: "https://github.com/Bluskyo/Katsuyou_Backend",
     id: 2,
-    icon: <img className="carousel-icon" src={"/project-logos/katsuyou.ico"} alt="katuyou logo"/>,
+    icon: <img className="carousel-icon" src={"/logos/katsuyou.ico"} alt="katuyou logo"/>,
   },
     {
     title: "JMDict Extended",
     description: "Pipeline which adds JLPT and furigana to the JMDict dictonary files.",
+    link: "https://github.com/Bluskyo/JMDict_Extended",
     id: 4,
-    icon: <img className="carousel-icon" src={"/github-logo.svg"} alt="github logo"/>,
+    icon: <img className="carousel-icon" src={"/logos/github-logo.svg"} alt="github logo"/>,
   },
   {
     title: "Watch2GetherBot",
     description: "Discord Bot for automatically creating Watch2Gether rooms. ",
+    link: "https://github.com/Bluskyo/Watch2GetherBot",
     id: 3,
-    icon: <img className="carousel-icon" src={"/project-logos/watch2gether.png"} alt="watch2gether logo"/>,
+    icon: <img className="carousel-icon" src={"/logos/watch2gether.png"} alt="watch2gether logo"/>,
   },
 
 ];
@@ -197,7 +202,9 @@ export default function Carousel({
                 <span className="carousel-icon-container">{item.icon}</span>
               </div>
               <div className="carousel-item-content">
-                <div className="carousel-item-title">{item.title}</div>
+                <div className="carousel-item-title">
+                  <a href={item.link} target="_blank">{item.title} <span className="custom-icon"> </span></a>
+                </div>
                 <p className="carousel-item-description">{item.description}</p>
               </div>
             </motion.div>

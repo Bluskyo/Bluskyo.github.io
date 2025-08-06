@@ -27,6 +27,11 @@
   cursor: grab;
 }
 
+.custom-icon {
+  font-family: FiraMono Nerd Font, monospace;
+  cursor: pointer;
+}
+
 .carousel-item:active {
   cursor: grabbing;
 }
