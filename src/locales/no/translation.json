@@ -1,0 +1,23 @@
+{
+    "About": "Om",
+    "Projects": "Prosjekter",
+    "Contact": "Kontakt",
+    "About-section": "Hei👋🏻 Jeg er Isak, en utvikler bosatt i Norge med en utdanning i backend utvikling, og en lidenskap for web utvikling. \n\nMed en interese for koding og japansk, har jeg kombinert dem for å lage løsninger for japansk språk lærere som gjør det lettere å studere. Gjennom tiden min når jeg studerte og byggde mine egene prosjekter har jeg brukt 'divide and conquer', tankegangen på mange forskjellige problemer og lært nye teknologier. Å lage bærekraftig løsninger for å løse ekte problemer er hva jeg brenner for og det som får meg til å kode.",
+    "Projects-section": "Her er noen av projektene jeg har jobbet på👇🏻",
+    "Contact-section": "Ta gjerne kontakt med meg!",
+    "Carousel": {
+        "Anki-add": "Firefox utvidelse for å raskt søke opp japanske ord og legge dem til i Anki.",
+        "Katsuyou": "Nettside for å trene på japanske bøyninger.",
+        "Jmdict": "Pipeline som legger til JLPT og furigana til JMDict ordbok filen.",
+        "W2G": "Discord Bot for å automatisk lage Watch2Gether rom."
+    },
+    "Contact-form": {
+        "Email": "Epost",
+        "Message": "Melding",
+        "Button": "Send inn"
+    },
+    "Footer": {
+        "Main": "Kildekode for nettsiden",
+        "Link": "her"
+    }
+}

@@ -3,6 +3,7 @@ import './Card.css'
 import type { color, image, inputField } from './Content';
 import Carousel from './Carousel';
 import { toast } from 'sonner'
+import { useTranslation } from 'react-i18next';
 
 type ContentProps = {
   title: string
@@ -39,8 +40,9 @@ const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   });
 }
 
-
 export default function Card(props: ContentProps) {
+  const { t } = useTranslation();
+  
   const gradientString = props.color
   .map(stop => stop.stop !== undefined ? `${stop.color} ${stop.stop}%` : stop.color)
   .join(', ');
@@ -52,7 +54,7 @@ export default function Card(props: ContentProps) {
   return (
     <div className='card' id={props.title} style={styles}>
       <span className='title'>
-        {props.title}
+        {t(props.title)}
       </span>
 
       {props.image?.map((image: image, index: number) => {
@@ -64,7 +66,7 @@ export default function Card(props: ContentProps) {
       })}
 
       <p className='text-content'>
-        {props.content}
+        {t(props.content)}
       </p>
 
       {props.carousel &&
@@ -85,7 +87,7 @@ export default function Card(props: ContentProps) {
           {props.inputData?.map((input: inputField, index: number) => {
             if (input.type === "textarea") {
               return (
-                <label htmlFor={input.name} key={index}>{input.name}
+                <label htmlFor={input.name} key={index}>{t(input.text)} 
                   <textarea
                   key={index}
                   id={input.name}
@@ -100,7 +102,7 @@ export default function Card(props: ContentProps) {
               } else {
                 return (
                   <div className='input-field' key={index}>
-                    <label htmlFor={input.name} key={index}>{input.name}
+                    <label htmlFor={input.name} key={index}>{t(input.text)} 
                       <input
                       key={index}
                       type={input.type}
@@ -117,7 +119,7 @@ export default function Card(props: ContentProps) {
             }
           )}
           <div className='submit-container'>
-            <button className="submit-button">Send in</button>
+            <button className="submit-button">{t("Contact-form.Button")}</button>
           </div>
 
         </form>
@@ -127,7 +129,13 @@ export default function Card(props: ContentProps) {
       {props.image?.map((image: image, index: number) => {
         if (image.pos === "bottom") {
           return (
-            <a href={image.link} key={index} target="_blank"><img className='logo-picture' src={image.src} alt={image.altText}/></a>
+            <a href={image.link}
+              key={index} 
+              target="_blank">
+                <img className='logo-picture' 
+                src={image.src} 
+                alt={image.altText}/>
+            </a>
           )
         }
       })}

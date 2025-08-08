@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 function Footer() {
+  const { t } = useTranslation();
+  
   return (
-    <footer className="footer"> Source code for website&nbsp;
-      <a href="https://github.com/Bluskyo/Bluskyo.github.io">here</a>
+    <footer className="footer"> {t("Footer.Main")}&nbsp;
+      <a href="https://github.com/Bluskyo/Bluskyo.github.io">{t("Footer.Link")}</a>
     </footer>
   )
 }

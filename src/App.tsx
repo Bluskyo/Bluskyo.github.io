@@ -1,6 +1,5 @@
 import Content from "./components/Content"
 import Footer from "./components/Footer"
-import LanguageSelect from "./components/LanguageSelect"
 import Navbar from "./components/Navbar"
 import { Toaster } from 'sonner'
 
@@ -9,7 +8,6 @@ function App() {
     <>
       <Toaster richColors={true}/>
       <Navbar />
-      <LanguageSelect/>
       <Content />
       <Footer />
     </>

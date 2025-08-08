@@ -8,6 +8,7 @@ export type color = {
 
 export type inputField = {
   name: string
+  text: string
   type: string
   placeholder?: string
   required: boolean
@@ -20,7 +21,7 @@ export type image = {
   link?: string
 }
 
-function Content() {
+export default function Content() {
 
   const aboutColors: color[] = [
     { color: "rgba(71, 0, 213, 1)" },
@@ -45,19 +46,18 @@ function Content() {
   const contactImages: image[] = [
     { src: "/logos/github-logo.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
     { src: "/logos/linkedin-logo.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
-    //{ src: "/mail-logo.svg", altText: "Mail icon", pos: "bottom", link: "mailto:"},
   ]
 
   const contactInput: inputField[] = [
-    { name: "Email", type:"email", required: true}, 
-    { name: "Message", type:"textarea", required: true }
+    { name: "Email", text:"Contact-form.Email", type:"email", required: true}, 
+    { name: "Message", text: "Contact-form.Message", type:"textarea", required: true }
   ]
 
   return (
     <div className="content-grid">
       <Card 
       title="About" 
-      content={ `Hi👋🏻 I'm Isak a developer based in Norway with a formal degree in backend development, and a passion for web development.\n\nWith a passion for coding and japanese, I have sought to combine the two to create solutions for japanese learners that makes it easier to study. Through my time studying and building my own projects, I've divided and conquered many problems, and learned new technologies while doing so. Creating sustainable solutions to solve real world problems is what fuels me to keep coding.` }
+      content="About-section"
       color={aboutColors}
       gradientAngle={180}
       image={aboutImage}
@@ -65,7 +65,7 @@ function Content() {
 
       <Card 
       title="Projects"
-      content="These are some of my favorite projects that I have worked on👇🏻" 
+      content="Projects-section" 
       carousel={true}
       color={projectsColors}
       gradientAngle={0}
@@ -73,7 +73,7 @@ function Content() {
 
       <Card 
       title="Contact"
-      content="Please feel free to contact me!"
+      content="Contact-section"
       color={contactColors}
       gradientAngle={0}
       inputData={contactInput}
@@ -82,5 +82,3 @@ function Content() {
     </div>
   )
 }
-
-export default Content

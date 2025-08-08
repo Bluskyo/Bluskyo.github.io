@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
+import LanguageSelect from "./LanguageSelect"
+
 
 function Navbar() {
 
@@ -9,26 +12,23 @@ function Navbar() {
     })
   }
 
+  const { t } = useTranslation();
+  const titles: string[] = ["About", "Projects", "Contact"];
+
   return (
     <>
       <div className='navbar-wrapper'>
         <span className='navbar'>
-          <span className='category' 
-          tabIndex={0}
-          onClick={() => {scrollTo("About")}}
-          >About</span>
-
-          <span className='category' 
-          tabIndex={0}
-          onClick={() => {scrollTo("Projects")}}
-          >Projects</span>
-
-          <span className='category' 
-          tabIndex={0}
-          onClick={() => {scrollTo("Contact")}}
-          >Contact</span>
+          {titles.map((title) => 
+            <span className='category'
+            tabIndex={0}
+            key={title}
+            onClick={() => {scrollTo(title)}}
+            >{t(title)}</span>
+          )}
         </span>
       </div>
+      <LanguageSelect/>
     </>
   )
 }

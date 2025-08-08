@@ -1,0 +1,23 @@
+{
+    "About": "About",
+    "Projects": "Projects",
+    "Contact": "Contact",
+    "About-section": "Hi👋🏻 I'm Isak a developer based in Norway with a formal degree in backend development, and a passion for web development.\n\nWith a passion for coding and japanese, I have sought to combine the two to create solutions for japanese learners that makes it easier to study. Through my time studying and building my own projects, I've divided and conquered many problems, and learned new technologies while doing so. Creating sustainable solutions to solve real world problems is what fuels me to keep coding.",
+    "Projects-section": "These are some of my favorite projects that I have worked on👇🏻",
+    "Contact-section": "Please feel free to contact me!",
+    "Carousel": {
+        "Anki-add": "Firefox extension for quickly adding japanese words to anki.",
+        "Katsuyou": "Website for practicing japanese verb conjugation.",
+        "Jmdict": "Pipeline which adds JLPT and furigana to the JMDict dictonary files.",
+        "W2G": "Discord Bot for automatically creating Watch2Gether rooms."
+    },
+    "Contact-form": {
+        "Email": "Email",
+        "Message": "Message",
+        "Button": "Send in"
+    },
+    "Footer": {
+        "Main": "Source code for website",
+        "Link": "here"
+    }
+}
