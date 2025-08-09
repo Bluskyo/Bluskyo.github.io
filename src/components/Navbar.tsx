@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
-import LanguageSelect from "./LanguageSelect"
-
 
 function Navbar() {
 
@@ -28,7 +26,6 @@ function Navbar() {
           )}
         </span>
       </div>
-      <LanguageSelect/>
     </>
   )
 }

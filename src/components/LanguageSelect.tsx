@@ -19,7 +19,7 @@ export default function LanguageSelect() {
   const languages = {
     en: "ENG",
     no: "NOR",
-    jp: "JPN"
+    ja: "JPN"
   } as const;
 
   type LanguageCode = keyof typeof languages;
@@ -35,12 +35,12 @@ export default function LanguageSelect() {
       />}
 
       {expand && 
-      <div className='language-select-list' 
+      <div className="language-select-list" 
       onMouseLeave={ () =>  shrinkIcon()}>
         {(Object.keys(languages) as LanguageCode[]).map((lng) => (
         <span
           key={lng}
-          className="language-item"
+          className={lng === i18n.language ? "current-language" : "languages"}
           onClick={() => {
             i18n.changeLanguage(lng);
             shrinkIcon();

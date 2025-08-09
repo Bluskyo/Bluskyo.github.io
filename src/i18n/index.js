@@ -4,9 +4,8 @@ import { initReactI18next } from "react-i18next";
 
 import translationsEng from '../locales/en/translation.json';
 import translationsNo from '../locales/no/translation.json';
-import translationsJp from '../locales/jp/translation.json';
+import translationsJp from '../locales/ja/translation.json';
 
-// the translations
 const resources = {
   en: {
     translation: translationsEng
@@ -14,18 +13,31 @@ const resources = {
   no: {
     translation: translationsNo
   },
-  jp: {
+  ja: {
     translation: translationsJp
   },
 };
+
+const options = {
+  order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag'],
+  lookupQuerystring: 'lng',
+  lookupCookie: 'i18next',
+  lookupLocalStorage: 'i18nextLng',
+  lookupSessionStorage: 'i18nextLng',
+
+  // cache user language
+  caches: ['localStorage'],
+  excludeCacheFor: ['cimode'],
+}
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    detection: options,
     fallbackLng: "en",
-    supportedLngs: ['en', 'no', 'jp'],
+    supportedLngs: ['en', 'no', 'ja'],
     interpolation: {
       escapeValue: false
     },

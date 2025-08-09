@@ -1,5 +1,6 @@
 import Card from "./Card"
 import './Content.css'
+import LanguageSelect from "./LanguageSelect"
 
 export type color = {
   color: string
@@ -54,31 +55,36 @@ export default function Content() {
   ]
 
   return (
-    <div className="content-grid">
-      <Card 
-      title="About" 
-      content="About-section"
-      color={aboutColors}
-      gradientAngle={180}
-      image={aboutImage}
-      />
+    <>
+      <div className="content-grid">
+        <LanguageSelect/>
 
-      <Card 
-      title="Projects"
-      content="Projects-section" 
-      carousel={true}
-      color={projectsColors}
-      gradientAngle={0}
-      />
+        <Card 
+        title="About" 
+        content="About-section"
+        color={aboutColors}
+        gradientAngle={180}
+        image={aboutImage}
+        />
 
-      <Card 
-      title="Contact"
-      content="Contact-section"
-      color={contactColors}
-      gradientAngle={0}
-      inputData={contactInput}
-      image={contactImages}
-      />
-    </div>
+        <Card 
+        title="Projects"
+        content="Projects-section" 
+        carousel={true}
+        color={projectsColors}
+        gradientAngle={0}
+        />
+
+        <Card 
+        title="Contact"
+        content="Contact-section"
+        color={contactColors}
+        gradientAngle={0}
+        inputData={contactInput}
+        image={contactImages}
+        />
+      </div>
+    </>
+
   )
 }
