@@ -1,0 +1,28 @@
+.effect-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 8;
+    display: grid;
+    align-items: center;
+}
+
+.flash-text {
+    color: rgb(255, 255, 255);
+    font-size: min(50vw, 300px);
+    margin-inline: auto;
+    cursor: default;
+    filter: blur(10px);
+    animation: onClick 1s forwards;
+}
+
+@keyframes onClick {
+  from {
+    color: rgb(255, 255, 255);
+    filter: blur(0px);
+  }
+  to {
+    color: rgba(255, 255, 255, 0);
+    filter: blur(5px);
+  }
+}
