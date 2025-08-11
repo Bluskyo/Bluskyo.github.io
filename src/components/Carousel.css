@@ -69,7 +69,6 @@
 
 .carousel-item-header {
   padding: 20px;
-  padding-top: 20px;
 }
 
 .carousel-icon-container {
@@ -88,20 +87,30 @@
 }
 
 .carousel-item-content {
-  padding: 20px;
-  padding-bottom: 20px;
+  padding: 0px 20px 20px 20px ;
 }
 
 .carousel-item-title {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
 }
 
 .carousel-item-description {
+  margin-bottom: 0;
   font-size: 14px;
   color: #fff;
+}
+
+.carousel-item-coding-language {
+  /* border: 1px solid white; */
+  font-size: 14px;
+  background-color: white; 
+  color: black;
+  border-radius: 30px;
+  padding: 0 3px 0 6px;
+  margin-right: 4px
 }
 
 .carousel-indicators-container {

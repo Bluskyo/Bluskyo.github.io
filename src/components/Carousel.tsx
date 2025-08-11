@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next";
 export interface CarouselItem {
   title: string;
   description: string;
-  link: string,
+  link: string;
+  codingLanguage: string[];
   id: number;
   icon: React.ReactElement;
 }
@@ -27,6 +28,7 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     title: "Anki-Add",
     description: "Carousel.Anki-add",
     link: "https://github.com/Bluskyo/Anki-Add",
+    codingLanguage: ["JavaScript"],
     id: 1,
     icon: <img className="carousel-icon" src={"/logos/anki-add.png"} alt="anki-add logo"/>,
   },
@@ -34,12 +36,14 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     title: "Katsuyou",
     description: "Carousel.Katsuyou",
     link: "https://github.com/Bluskyo/Katsuyou_Backend",
+    codingLanguage: ["Java", "Spring Boot", "React"],
     id: 2,
     icon: <img className="carousel-icon" src={"/logos/katsuyou.ico"} alt="katuyou logo"/>,
   },
     {
     title: "JMDict Extended",
     description: "Carousel.Jmdict",
+    codingLanguage: ["Python"],
     link: "https://github.com/Bluskyo/JMDict_Extended",
     id: 4,
     icon: <img className="carousel-icon" src={"/logos/github-logo.svg"} alt="github logo"/>,
@@ -48,6 +52,7 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     title: "Watch2GetherBot",
     description: "Carousel.W2G",
     link: "https://github.com/Bluskyo/Watch2GetherBot",
+    codingLanguage: ["Python"],
     id: 3,
     icon: <img className="carousel-icon" src={"/logos/watch2gether.png"} alt="watch2gether logo"/>,
   },
@@ -209,6 +214,12 @@ export default function Carousel({
                 <div className="carousel-item-title">
                   <a href={item.link} target="_blank">{item.title}</a>🔗
                 </div>
+                {item.codingLanguage.map( (language) => {
+                  return (
+                    <span className="carousel-item-coding-language" key={language}>{language} </span>
+                  )
+                })}
+
                 <p className="carousel-item-description">{t(item.description)}</p>
               </div>
             </motion.div>
