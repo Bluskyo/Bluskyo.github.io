@@ -16,9 +16,16 @@ function App() {
     });
   });
 
-  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  document.body.classList.add(prefersLight ? "light" : "dark");
+  const prefferedTheme = localStorage.getItem("theme");
 
+  if (prefferedTheme){
+    document.body.classList.add(prefferedTheme);
+  } else {
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    document.body.classList.add(prefersLight ? "light" : "dark");
+  }
+
+  // dev option for checking preferrd themes.
   window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", e => {
     document.body.classList.toggle("dark", !e.matches);
     document.body.classList.toggle("light", e.matches);

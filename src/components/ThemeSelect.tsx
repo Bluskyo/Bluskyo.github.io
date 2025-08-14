@@ -13,10 +13,12 @@ export default function ThemeSelect() {
       body?.classList.add("light");
       body?.classList.remove("dark");
       setTheme("light");
+      localStorage.setItem("theme", "light");
     } else {
       body?.classList.add("dark");
       body?.classList.remove("light");
       setTheme("dark");
+      localStorage.setItem("theme", "dark");
     }
     return currentClass
   }
