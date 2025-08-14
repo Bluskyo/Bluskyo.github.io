@@ -61,9 +61,7 @@ export default function LanguageSelect() {
         </div>}
       </div>
       
-      {text &&
-        <FlashEffect text={text}/>
-      }
+
     </>
   )
 }
