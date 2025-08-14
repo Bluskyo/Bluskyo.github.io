@@ -1,6 +1,5 @@
 .navbar-wrapper {
     font-size: clamp(1rem, 1rem + 1.8vw, 2rem);
-    color: rgb(255, 255, 255);
     justify-content: center;
     display: flex;
     padding: 1rem 0rem 0rem 0rem;
@@ -10,7 +9,7 @@
 }
 
 .navbar {
-    background-color: black;
+    background-color: var(--color-ui-background);
     padding: 0rem 1.5rem 0rem 1.5rem;
     border-radius: 5rem;
     display: flex;
@@ -27,7 +26,7 @@
     content: '';
     height: 2px;
     width: 0%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-reversed-ui);
     position: absolute;
     left: 0;
     bottom: 5px;

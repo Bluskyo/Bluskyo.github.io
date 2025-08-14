@@ -1,14 +1,14 @@
 .effect-container {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 50%;
+  width: 50%;
   z-index: 8;
   display: grid;
   align-items: center;
 }
 
 .flash-text {
-  color: rgb(255, 255, 255);
+  color: var(--color-ui-background);
   font-size: min(50vw, 300px);
   margin-inline: auto;
   cursor: default;
@@ -18,11 +18,11 @@
 
 @keyframes onClick {
   from {
-    color: rgb(0, 0, 0);
+    color: var(--color-effect-from);
     filter: blur(0px);
   }
   to {
-    color: rgba(255, 255, 255, 0);
+    color: var(--color-effect-to);
     filter: blur(5px);
   }
 }

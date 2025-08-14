@@ -1,6 +1,6 @@
 .theme-icon {
-    background: black;
-    width: clamp(1rem, 1rem + 1.8vw, 2rem);
-    padding: 5px;
-    border-radius: 10px;
+    width: clamp(1rem, 1rem + 6vw, 3rem);
+    cursor: pointer;
+    filter: var(--color-icon);
+    transition: filter 2s;
 }

@@ -1,6 +1,9 @@
+import { useEffect, useState } from "react"
 import Card from "./Card"
 import './Content.css'
 import LanguageSelect from "./LanguageSelect"
+import ThemeSelect from "./ThemeSelect"
+import FlashEffect from "./FlashEffect"
 
 export type color = {
   color: string
@@ -23,8 +26,8 @@ export type image = {
 }
 
 const aboutColors: color[] = [
-  { color: "rgba(71, 0, 213, 1)" },
-  { color: "rgba(37, 0, 111, 1)" }
+  { color: "var(--card1-color1)" },
+  { color: "var(--card1-color2)" }
 ]
 
 const aboutImage: image[] = [
@@ -32,19 +35,19 @@ const aboutImage: image[] = [
 ]
 
 const projectsColors: color[] = [
-  { color: "rgba(213, 0, 110, 1)" },
-  { color: "rgba(37, 0, 111, 1)" }
+  { color: "var(--card2-color1)" },
+  { color: "var(--card2-color2)" }
 ]
 
 const contactColors: color[]  = [
-  { color: "rgba(37, 0, 111, 1)" },
-  { color: "rgba(85, 41, 172, 1)", stop: 40 },
-  { color: "rgba(97, 255, 181, 1)" }
+  { color: "var(--card3-color1)" },
+  { color: "var(--card3-color2)", stop: 40 },
+  { color: "var(--card3-color3)" }
 ]
 
 const contactImages: image[] = [
-  { src: "/logos/github-logo.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
-  { src: "/logos/linkedin-logo.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
+  { src: "/logos/github.svg", altText: "Github icon", pos: "bottom", link: "https://github.com/Bluskyo"},
+  { src: "/logos/linkedin.png", altText: "Linkedin icon", pos: "bottom", link: "https://www.linkedin.com/in/isak-mikalsen/"},
 ]
 
 const contactInput: inputField[] = [
@@ -54,10 +57,27 @@ const contactInput: inputField[] = [
 
 export default function Content() {
 
+  const [text, setText] = useState("");
+
+  // Sets text to empty to remove element from html flow.
+  useEffect(() => {
+    setTimeout(() => setText(""), 800)
+  },[text]);
+
   return (
     <>
       <div className="content-grid">
-        <LanguageSelect/>
+        {text &&
+          <FlashEffect text={text}/>
+        }
+        <div className="icon-sidebar">
+          <div className="img-wrapper">
+            <ThemeSelect />
+          </div>
+          <div className="img-wrapper">
+            <LanguageSelect text={text} setText={setText}/>
+          </div>
+        </div>
 
         <Card 
         title="About" 

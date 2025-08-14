@@ -46,7 +46,7 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     codingLanguage: ["Python"],
     link: "https://github.com/Bluskyo/JMDict_Extended",
     id: 4,
-    icon: <img className="carousel-icon" src={"/logos/github-logo.svg"} alt="github logo"/>,
+    icon: <img className="carousel-icon" src={"/logos/github.svg"} alt="github logo"/>,
   },
   {
     title: "Watch2GetherBot",

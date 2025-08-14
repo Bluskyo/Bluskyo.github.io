@@ -1,17 +1,16 @@
 .language-select-icon {
-    background: black;
-    width: clamp(1rem, 1rem + 1.8vw, 2rem);
-    padding: 5px;
-    border-radius: 10px;
+    width: clamp(1rem, 1rem + 6vw, 3rem);
+    filter: var(--color-icon);
+    transition: filter 2s;
 }
 
 .language-select-list {
     font-family: Noto Sans JP;
     font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
-    background: black;
+    background: var(--color-ui-background);
+    color: var(--color-reversed-ui);
     padding: 5px;
     border-radius: 10px;
-    width: 2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -20,14 +19,14 @@
 .languages {
     cursor: pointer;
     position: relative;
-    background-color: black;
+    background-color: var(--color-ui-background);
 }
 
 .languages:after {
     content: '';
     height: 1px;
     width: 0%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-reversed-ui);
     position: absolute;
     left: 0;
     bottom: 2px;
@@ -41,7 +40,7 @@
 .current-language {
     cursor: default;
     pointer-events: none;
-    color: black;
-    background-color: white;
+    color: var(--color-ui-background);
+    background-color: var(--color-reversed-ui);
     border-radius: 20%;
 }

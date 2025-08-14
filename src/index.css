@@ -4,8 +4,14 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgb(255, 255, 255);
-  background-color: #2A0355;
+}
+
+.onload {
+  transition: all 0.3s ease;
+}
+
+.no-transition {
+  transition: none !important;
 }
 
 body {
@@ -14,10 +20,58 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
+
+  background-color: #E32DFF;
+}
+
+
+body.dark {
+  --color-background: #2A0355;
+  --color-ui-background: #000000;
+  --color-reversed-ui: #ffffff;
+  --color-icon: invert(0%);
+  --color-effect-from: rgb(0, 0, 0);
+  --color-effect-to: rgba(255, 255, 255, 0);
+  --card1-color1: #4700D5;
+  --card1-color2: #25006F;
+  --card2-color1: #D5006E;
+  --card2-color2: #25006F;
+  --card3-color1: #25006F;
+  --card3-color2: #7961ff;
+  --card3-color3: #D5006E;
+  
+  background-color: var(--color-background);
+  color:white;
+  transition: all 2s;
+}
+
+body.light {
+  --color-background: #E0C3FF;
+  --color-ui-background: #ffffff;
+  --color-reversed-ui: #000000;
+  --color-icon: invert(100%);
+  --color-effect-from: rgb(255, 255, 255);
+  --color-effect-to: rgba(255, 255, 255, 0);
+  --card1-color1: #ECE3FF;
+  --card1-color2: #E32DFF;
+  --card2-color1: #FF686B;
+  --card2-color2: #EC70FF;
+  --card3-color1: #EC70FF;
+  --card3-color2: #9867FA;
+  --card3-color3: #FF686B;
+
+  background-color: var(--color-background);
+  color: black;
+  transition: all 2s;
+}
+
+a {
+  color: var(--card2-color1);
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #f7a8f7c4
+  color: #f884f8c4
 }
 
 label, input, textarea {
@@ -29,23 +83,25 @@ label, input, textarea {
 input, textarea {
   font-family: inherit;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
-  background-color: white;
+  background-color: var(--color-reversed-ui);
+  color: var(--color-background);
   resize: none;
-  color: rgb(48, 48, 48);
   border: 2px solid rgb(105, 105, 105);
   border-radius: 4px;
   padding: 5px;
   outline: none;
-  transition: all 0.3s;
+  transition: background-color 2s;
 }
 
 textarea:hover,
 input:hover {
   border: 2px solid rgb(75, 70, 80);
+  transition: all 0.5s;
 }
 
 textarea:focus,
 input:focus {
-  border: 2px solid rgba(87, 89, 221, 0.918);
-  box-shadow: -1px 8px 33px -5px rgba(87,89,221,0.75);
+  border: 2px solid rgb(87, 89, 221);
+  box-shadow: -1px 8px 33px -5px rgb(87, 89, 221);
+  transition: all 0.5s;
 }
