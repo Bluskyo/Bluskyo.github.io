@@ -6,22 +6,12 @@
   color-scheme: light dark;
 }
 
-.onload {
-  transition: all 0.3s ease;
-}
-
-.no-transition {
-  transition: none !important;
-}
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   margin: 0;
   padding: 0;
-
-  background-color: #E32DFF;
 }
 
 
@@ -42,7 +32,6 @@ body.dark {
   
   background-color: var(--color-background);
   color:white;
-  transition: all 2s;
 }
 
 body.light {
@@ -62,8 +51,29 @@ body.light {
 
   background-color: var(--color-background);
   color: black;
-  transition: all 2s;
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color-background: #E0C3FF;
+    --color-ui-background: #ffffff;
+    --color-reversed-ui: #000000;
+    --color-icon: invert(100%);
+    --color-effect-from: rgb(255, 255, 255);
+    --color-effect-to: rgba(255, 255, 255, 0);
+    --card1-color1: #ECE3FF;
+    --card1-color2: #E32DFF;
+    --card2-color1: #FF686B;
+    --card2-color2: #EC70FF;
+    --card3-color1: #EC70FF;
+    --card3-color2: #9867FA;
+    --card3-color3: #FF686B;
+
+    background-color: var(--color-background);
+    color: black;
+  }
+}
+
 
 a {
   color: var(--card2-color1);
