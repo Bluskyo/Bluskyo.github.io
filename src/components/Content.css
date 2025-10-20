@@ -10,7 +10,7 @@
 .icon-sidebar {
     position: fixed;
     top: 2.8rem;
-    left: calc(50% - (min(95vw, 670px) / 2) - 0.9em);
+    left: calc(50% - (min(95vw, 670px) / 2) - 0.5em);
     z-index: 10;
     display: flex;
     flex-direction: column;
