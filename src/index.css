@@ -92,7 +92,7 @@ label, input, textarea {
 
 input, textarea {
   font-family: inherit;
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   background-color: white;
   color: black;
   resize: none;
