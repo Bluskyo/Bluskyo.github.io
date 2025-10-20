@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./ThemeSelect.css"
+import { IoMoonOutline } from "react-icons/io5";
+import { GoSun } from "react-icons/go";
 
 export default function ThemeSelect() {
 
@@ -25,17 +27,13 @@ export default function ThemeSelect() {
 
   if (theme == "dark") {
     return (    
-    <img className="theme-icon"
-      src="/icons/sun.svg"
-      alt="theme select icon"
-      onClick={switchTheme}>
-    </img>)
+    <GoSun className="theme-icon"
+      onClick={switchTheme}
+    />)
   } else {
     return (
-    <img className="theme-icon"
-      src="/icons/moon.svg"
-      alt="theme select icon"
-      onClick={switchTheme}>
-    </img>)
+    <IoMoonOutline className="theme-icon"
+      onClick={switchTheme}
+    />)
   }
 }

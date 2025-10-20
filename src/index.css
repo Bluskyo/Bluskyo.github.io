@@ -92,9 +92,9 @@ label, input, textarea {
 
 input, textarea {
   font-family: inherit;
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  background-color: var(--color-reversed-ui);
-  color: var(--color-background);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  background-color: white;
+  color: black;
   resize: none;
   border: 2px solid rgb(105, 105, 105);
   border-radius: 4px;

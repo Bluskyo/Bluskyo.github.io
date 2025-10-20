@@ -1,6 +1,7 @@
 import './LanguageSelect.css'
 import i18n from '../i18n';
 import { useState, type Dispatch, type SetStateAction } from 'react';
+import { CiGlobe } from "react-icons/ci";
 
 type effectProps = {
   text: string
@@ -33,9 +34,7 @@ export default function LanguageSelect(props: effectProps) {
     <>
 
       {hide &&
-      <img className="language-select-icon" 
-      src="/icons/language.png" 
-      alt="language select button"
+      <CiGlobe className="language-select-icon" 
       onMouseOver={expandIcon}
       onClick={expandIcon}
       />}

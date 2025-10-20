@@ -1,7 +1,11 @@
 .language-select-icon {
-    width: clamp(1rem, 1rem + 6vw, 3rem);
-    filter: var(--color-icon);
-    transition: filter 2s;
+  width: 34px;
+  height: 34px;
+  padding: 2px;
+  background-color: var(--color-ui-background);
+  color: var(--color-reversed-ui);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .language-select-list {
