@@ -107,7 +107,8 @@
   background-color: var(--color-reversed-ui);
   color: var(--color-ui-background);
   border-radius: 30px;
-  padding: 0 3px 0 6px;
+  padding: 0.35em 0.5em;
+  display: inline-block;
   margin-right: 4px;
   transition: background-color 2s;
 }

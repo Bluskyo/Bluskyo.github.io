@@ -46,8 +46,7 @@
     background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 2em;
-    padding: min(2em, 3%);
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding: 0.9em 1.2em; 
     transition: 
     background-color 0.4s,
     color 1s;
@@ -70,7 +69,8 @@
 
 .logo-picture {
    width: min(6vh, 3rem);
-   height: min(5vh, 2.7rem);
+   aspect-ratio: 1;
+   /* aspect ratio = height / width, the aspect ratio of thi smonitor is 21/9 (maybe idk) */
    transition: filter 0.3s;
 }
 
